@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileSizePipe } from '../shared/pipes/FileSizePipe';
 import { LogPipe } from '../shared/pipes/LogPipe';
+import { MaxLengthTextPipe } from '../shared/pipes/MaxLengthTextPipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     FileSizePipe,
-    LogPipe
+    LogPipe,
+    MaxLengthTextPipe
   ],
   imports: [
     BrowserModule,

@@ -67,7 +67,7 @@
           <div class="mb-3">
             <label for="email">Justification <span class="text-muted">(Optional)</span></label>
             <input formControlName="justification" type="text" class="form-control" id="justification" placeholder="A brief justification of this form">
-            <span> {{ form.controls.justification.value | lengthsize }}</span>
+            <span> {{ form.controls.justification.value | maxlenthtext }}</span>
             <div class="invalid-feedback">
               Please enter a valid email address for shipping updates.
             </div>
