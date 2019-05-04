@@ -10,7 +10,7 @@ export class AppComponent {
 
   public title = 'Angular Pipes';
   public form: FormGroup;
-  public file: any = [];
+  public file: any;
 
   constructor(
     private formBuilder: FormBuilder
@@ -20,18 +20,8 @@ export class AppComponent {
     });
   }
 
-  onFileChanged(event: any) {
-    this.file = event.target.files[0];
-  }
-
-  onUpload() {
-    const formData = new FormData();
-    for (const file of this.file) {
-      formData.append(name, file, file.name);
-    }
-
-    // just an example how this file will be send to the api
-    // this.http.post('url', formData).subscribe(x => ....);
+  onFileChanged(event: any): void {
+    event.target.files ? this.file = event.target.files : null;
   }
 
 }
