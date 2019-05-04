@@ -16,7 +16,8 @@ export class AppComponent {
     private formBuilder: FormBuilder
   ) {
     this.form = formBuilder.group({
-      photo: []
+      name: [],
+      justification: []
     });
   }
 
